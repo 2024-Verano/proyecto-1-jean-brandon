@@ -14,7 +14,10 @@ public class Main {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+
+        Dashboard screen = new Dashboard();
+        screen.setVisible(true);
+        screen.setLocationRelativeTo(null);
     }
     
 }
