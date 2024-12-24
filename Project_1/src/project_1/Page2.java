@@ -34,14 +34,15 @@ public class Page2 extends javax.swing.JPanel {
         label_canton = new javax.swing.JLabel();
         label_birth = new javax.swing.JLabel();
         label_district = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
-        jTextField4 = new javax.swing.JTextField();
-        jTextField5 = new javax.swing.JTextField();
-        jComboBox1 = new javax.swing.JComboBox<>();
-        jComboBox2 = new javax.swing.JComboBox<>();
-        jComboBox3 = new javax.swing.JComboBox<>();
+        cus_name = new javax.swing.JTextField();
+        cus_lastname = new javax.swing.JTextField();
+        cus_phone = new javax.swing.JTextField();
+        cus_email = new javax.swing.JTextField();
+        cus_birth = new javax.swing.JTextField();
+        cus_canton = new javax.swing.JComboBox<>();
+        cus_province = new javax.swing.JComboBox<>();
+        cus_district = new javax.swing.JComboBox<>();
+        regis = new javax.swing.JButton();
 
         setPreferredSize(new java.awt.Dimension(450, 270));
 
@@ -61,43 +62,60 @@ public class Page2 extends javax.swing.JPanel {
 
         label_district.setText("Distrito");
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jComboBox2.addActionListener(new java.awt.event.ActionListener() {
+        cus_name.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox2ActionPerformed(evt);
+                cus_nameActionPerformed(evt);
             }
         });
 
-        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cus_canton.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "San Ramón", " " }));
+
+        cus_province.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Alajuela", "San José" }));
+        cus_province.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cus_provinceActionPerformed(evt);
+            }
+        });
+
+        cus_district.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Peñas Blancas", " " }));
+
+        regis.setText("Registar");
+        regis.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                regisActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(32, 32, 32)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(label_name)
                     .addComponent(label_phone)
                     .addComponent(label_province)
-                    .addComponent(jTextField1)
-                    .addComponent(jComboBox2, 0, 157, Short.MAX_VALUE)
-                    .addComponent(jComboBox3, 0, 157, Short.MAX_VALUE)
+                    .addComponent(cus_name)
+                    .addComponent(cus_province, 0, 157, Short.MAX_VALUE)
+                    .addComponent(cus_district, 0, 157, Short.MAX_VALUE)
                     .addComponent(label_district)
-                    .addComponent(jTextField3))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 45, Short.MAX_VALUE)
+                    .addComponent(cus_phone))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 108, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jComboBox1, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(cus_canton, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(label_lastname)
                     .addComponent(label_email)
                     .addComponent(label_canton)
-                    .addComponent(jTextField4, javax.swing.GroupLayout.DEFAULT_SIZE, 157, Short.MAX_VALUE)
-                    .addComponent(jTextField2)
+                    .addComponent(cus_email, javax.swing.GroupLayout.DEFAULT_SIZE, 157, Short.MAX_VALUE)
+                    .addComponent(cus_lastname)
                     .addComponent(label_birth)
-                    .addComponent(jTextField5))
+                    .addComponent(cus_birth))
                 .addGap(24, 24, 24))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(regis)
+                .addGap(200, 200, 200))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -108,52 +126,75 @@ public class Page2 extends javax.swing.JPanel {
                     .addComponent(label_name))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(cus_lastname, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cus_name, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(label_email)
                     .addComponent(label_phone))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(cus_email, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cus_phone, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(label_canton)
                     .addComponent(label_province))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jComboBox1)
-                    .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(32, 32, 32)
+                    .addComponent(cus_canton)
+                    .addComponent(cus_province, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(label_district)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jComboBox3))
+                        .addComponent(cus_district))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(label_birth)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(41, Short.MAX_VALUE))
+                        .addComponent(cus_birth, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
+                .addComponent(regis, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jComboBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox2ActionPerformed
+    private void cus_provinceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cus_provinceActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox2ActionPerformed
+    }//GEN-LAST:event_cus_provinceActionPerformed
+
+    private void regisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_regisActionPerformed
+        
+       Customers cliente = new Customers ();
+       cliente.setCostumer_code(1);
+       cliente.setCostumer_name(cus_name.getText());
+       cliente.setLast_namec(cus_lastname.getText());
+       cliente.setPhone_number(Integer.valueOf(cus_phone.getText()));
+       cliente.setCostumer_email(cus_email.getText());
+       cliente.setCostumer_province((String) cus_province.getSelectedItem());
+       cliente.setCostumer_canton((String) cus_canton.getSelectedItem());
+       cliente.setCostumer_distict((String) cus_district.getSelectedItem());
+       cliente.setBirth_date(Integer.valueOf(cus_birth.getText()));
+       
+       System.out.println(cliente.toString());
+       
+    }//GEN-LAST:event_regisActionPerformed
+
+    private void cus_nameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cus_nameActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cus_nameActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JComboBox<String> jComboBox1;
-    private javax.swing.JComboBox<String> jComboBox2;
-    private javax.swing.JComboBox<String> jComboBox3;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
+    private javax.swing.JTextField cus_birth;
+    private javax.swing.JComboBox<String> cus_canton;
+    private javax.swing.JComboBox<String> cus_district;
+    private javax.swing.JTextField cus_email;
+    private javax.swing.JTextField cus_lastname;
+    private javax.swing.JTextField cus_name;
+    private javax.swing.JTextField cus_phone;
+    private javax.swing.JComboBox<String> cus_province;
     private javax.swing.JLabel label_birth;
     private javax.swing.JLabel label_canton;
     private javax.swing.JLabel label_district;
@@ -162,5 +203,6 @@ public class Page2 extends javax.swing.JPanel {
     private javax.swing.JLabel label_name;
     private javax.swing.JLabel label_phone;
     private javax.swing.JLabel label_province;
+    private javax.swing.JButton regis;
     // End of variables declaration//GEN-END:variables
 }
