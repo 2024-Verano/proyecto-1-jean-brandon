@@ -4,6 +4,12 @@
  */
 package project_1;
 
+import controlador.Controlador;
+import modelo.Customers;
+import vista.Dashboard;
+
+        
+
 /**
  *
  * @author brand
@@ -14,10 +20,19 @@ public class Main {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-
-        Dashboard screen = new Dashboard();
-        screen.setVisible(true);
-        screen.setLocationRelativeTo(null);
+        Customers mod = new Customers();
+        Dashboard view = new Dashboard();
+        Controlador ctr = new Controlador(view,mod);
+        ctr.iniciar();
+        view.setVisible(true);
+        
+               
+        
+        
+        
+        //Dashboard screen = new Dashboard();
+        //screen.setVisible(true);
+        //screen.setLocationRelativeTo(null);
     }
     
 }

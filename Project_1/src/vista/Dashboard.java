@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package project_1;
+package vista;
 
 /**
  *
@@ -24,6 +24,7 @@ public class Dashboard extends javax.swing.JFrame {
         content.add(pg1);
         content.revalidate();
         content.repaint();
+        nextbtn.setActionCommand("Accion");
     }
 
     /**
@@ -94,6 +95,7 @@ public class Dashboard extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void nextbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nextbtnActionPerformed
+        
         content.removeAll();
         Page2 pg2 = new Page2();
         pg2.setSize(500,365);
@@ -102,9 +104,11 @@ public class Dashboard extends javax.swing.JFrame {
         content.removeAll();
         content.add(pg2);
         content.revalidate();
-        content.repaint();
+        content.repaint();  
+        
     }//GEN-LAST:event_nextbtnActionPerformed
-
+    
+    
     /**
      * @param args the command line arguments
      */
@@ -113,6 +117,6 @@ public class Dashboard extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel content;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JButton nextbtn;
+    public javax.swing.JButton nextbtn;
     // End of variables declaration//GEN-END:variables
 }

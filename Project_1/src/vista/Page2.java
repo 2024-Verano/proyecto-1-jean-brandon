@@ -2,7 +2,10 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
-package project_1;
+package vista;
+
+import controlador.Controlador;
+import modelo.Customers;
 
 /**
  *
@@ -13,8 +16,12 @@ public class Page2 extends javax.swing.JPanel {
     /**
      * Creates new form Page2
      */
+    
+    Controlador objetocontrolador;
     public Page2() {
         initComponents();
+        
+        
     }
 
     /**
@@ -154,18 +161,17 @@ public class Page2 extends javax.swing.JPanel {
                         .addComponent(label_birth)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(cus_birth, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(regis, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents
 
     private void cus_provinceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cus_provinceActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_cus_provinceActionPerformed
 
     private void regisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_regisActionPerformed
-        
        Customers cliente = new Customers ();
        cliente.setCostumer_code(1);
        cliente.setCostumer_name(cus_name.getText());
@@ -179,22 +185,50 @@ public class Page2 extends javax.swing.JPanel {
        
        System.out.println(cliente.toString());
        
+       
     }//GEN-LAST:event_regisActionPerformed
-
+    
+    
+    public String getcus_name(){
+        return cus_name.getText();
+    }
+    public String getcus_lastname(){
+        return cus_lastname.getText();
+    }
+    public Integer getcus_phone(){
+        return Integer.parseInt(cus_phone.getText());
+    }
+    public String getcus_email(){
+        return cus_email.getText();
+    }
+    public String getcus_province(){
+        return (String) cus_province.getSelectedItem();
+    }
+    public String getcus_canton(){
+        return (String) cus_canton.getSelectedItem();
+    }
+    public String getcus_district(){
+        return (String) cus_district.getSelectedItem();
+    }
+    public Integer getcus_birth(){
+        return Integer.parseInt(cus_birth.getText());
+    }
+    
+    
     private void cus_nameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cus_nameActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_cus_nameActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField cus_birth;
-    private javax.swing.JComboBox<String> cus_canton;
-    private javax.swing.JComboBox<String> cus_district;
-    private javax.swing.JTextField cus_email;
-    private javax.swing.JTextField cus_lastname;
-    private javax.swing.JTextField cus_name;
-    private javax.swing.JTextField cus_phone;
-    private javax.swing.JComboBox<String> cus_province;
+    public javax.swing.JTextField cus_birth;
+    public javax.swing.JComboBox<String> cus_canton;
+    public javax.swing.JComboBox<String> cus_district;
+    public javax.swing.JTextField cus_email;
+    public javax.swing.JTextField cus_lastname;
+    public javax.swing.JTextField cus_name;
+    public javax.swing.JTextField cus_phone;
+    public javax.swing.JComboBox<String> cus_province;
     private javax.swing.JLabel label_birth;
     private javax.swing.JLabel label_canton;
     private javax.swing.JLabel label_district;
@@ -203,6 +237,6 @@ public class Page2 extends javax.swing.JPanel {
     private javax.swing.JLabel label_name;
     private javax.swing.JLabel label_phone;
     private javax.swing.JLabel label_province;
-    private javax.swing.JButton regis;
+    public javax.swing.JButton regis;
     // End of variables declaration//GEN-END:variables
 }
