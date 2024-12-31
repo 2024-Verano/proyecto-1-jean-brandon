@@ -11,89 +11,90 @@ import java.util.ArrayList;
  * @author brand
  */
 public class Billing {
-    private int Invoice_Number; 
-    private int Customer_Number;
-    private int Receipt_Date; //cambiar luego
-    private boolean Status; 
-    private ArrayList List_Article;
-    private int Subtotal;
-    private int Item_Quantity;
-    private int Tax;
-    private int Total;
+    private int invoice_number; 
+    private int customer_number;
+    private int receipt_date; //cambiar luego
+    private boolean status; 
+    private ArrayList list_article;
+    private int subtotal;
+    private int item_quantity;
+    private int tax;
+    private int total;
 
     public Billing() {
     }
 
-    public int getInvoice_Number() {
-        return Invoice_Number;
+    public int getInvoice_number() {
+        return invoice_number;
     }
 
-    public void setInvoice_Number(int Invoice_Number) {
-        this.Invoice_Number = Invoice_Number;
+    public void setInvoice_number(int invoice_number) {
+        this.invoice_number = invoice_number;
     }
 
-    public int getCustomer_Number() {
-        return Customer_Number;
+    public int getCustomer_number() {
+        return customer_number;
     }
 
-    public void setCustomer_Number(int Customer_Number) {
-        this.Customer_Number = Customer_Number;
+    public void setCustomer_number(int customer_number) {
+        this.customer_number = customer_number;
     }
 
-    public int getReceipt_Date() {
-        return Receipt_Date;
+    public int getReceipt_date() {
+        return receipt_date;
     }
 
-    public void setReceipt_Date(int Receipt_Date) {
-        this.Receipt_Date = Receipt_Date;
+    public void setReceipt_date(int receipt_date) {
+        this.receipt_date = receipt_date;
     }
 
     public boolean isStatus() {
-        return Status;
+        return status;
     }
 
-    public void setStatus(boolean Status) {
-        this.Status = Status;
+    public void setStatus(boolean status) {
+        this.status = status;
     }
 
-    public ArrayList getList_Article() {
-        return List_Article;
+    public ArrayList getList_article() {
+        return list_article;
     }
 
-    public void setList_Article(ArrayList List_Article) {
-        this.List_Article = List_Article;
+    public void setList_article(ArrayList list_article) {
+        this.list_article = list_article;
     }
 
     public int getSubtotal() {
-        return Subtotal;
+        return subtotal;
     }
 
-    public void setSubtotal(int Subtotal) {
-        this.Subtotal = Subtotal;
+    public void setSubtotal(int subtotal) {
+        this.subtotal = subtotal;
     }
 
-    public int getItem_Quantity() {
-        return Item_Quantity;
+    public int getItem_quantity() {
+        return item_quantity;
     }
 
-    public void setItem_Quantity(int Item_Quantity) {
-        this.Item_Quantity = Item_Quantity;
+    public void setItem_quantity(int item_quantity) {
+        this.item_quantity = item_quantity;
     }
 
     public int getTax() {
-        return Tax;
+        return tax;
     }
 
-    public void setTax(int Tax) {
-        this.Tax = Tax;
+    public void setTax(int tax) {
+        this.tax = tax;
     }
 
     public int getTotal() {
-        return Total;
+        return total;
     }
 
-    public void setTotal(int Total) {
-        this.Total = Total;
+    public void setTotal(int total) {
+        this.total = total;
     }
-    
+
+ 
 }
